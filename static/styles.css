@@ -1,0 +1,51 @@
+/* Add a global font and center text */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #fff; /* White text color for visibility on dark background */
+  }
+  
+  /* Set the background image */
+  body {
+    background-image: url('pozadina.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  /* Style the container for the upload form and result */
+  .container {
+    border: 2px solid #f8f8f8;
+    border-radius: 5px;
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Translucent background */
+    display: inline-block;
+  }
+  
+  /* Style the file input and submit button */
+  input[type=file], input[type=submit] {
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer; /* Re-style the cursor to indicate a clickable area */
+    font-size: 16px;
+  }
+  
+  input[type=submit] {
+    background-color: #5cb85c; /* A green background for the submit button */
+    color: white;
+  }
+  
+  /* Add some padding and a max-width to your images */
+  img {
+    max-width: 40%; /* Limit the size of the image */
+    border: 1px solid #ddd; /* Add a border around your images */
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 20px;
+  }
+  

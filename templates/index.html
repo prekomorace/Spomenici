@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prepoznavanje spomenika</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prepoznavanje spomenika kulture</h1>
+        <p>Ova aplikacija ce vam pomoci da utvrdite o kojem se spomeniku radi.</br> Potrebno je slikati ga i sliku postavti.</p>
+        <form action="/uploader" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="file">
+            <input type="submit" value="Otkrij!">
+        </form>
+    </div>
+</body>
+</html>

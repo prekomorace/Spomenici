@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rezultat</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .image-left {
+            float: left;
+            margin-right: 20px;
+            margin-left: 50px;  /* Increase left margin */
+            width: 450px;  /* Adjust as needed */
+            height: auto;  /* Maintain aspect ratio */
+        }
+        .text-frame {
+            border: 2px solid #000;  /* Keep the border */
+            padding: 10px;  /* Keep the padding */
+            background-color: rgba(248, 248, 248, 0.8);  /* Increase opacity */
+            width: 500px;  /* Keep the width */
+            color: #000;  /* Make the text black */
+            position: absolute;  /* Position the div */
+            left: 40%;  /* Start a bit more to the left of the center of the page */
+            transform: translateX(25%);  /* Move the div to the right */
+            text-align: center;  /* Center the text horizontally */
+            
+        }
+        .button-under-div {
+            display: block;
+            margin: 20px auto 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Otkriven spomenik</h1>
+
+    <img class="image-left" src="{{ url_for('static', filename=filename) }}" alt="Processed Image">
+
+    <div class="text-frame">Spomenik koji ste slikali je: <strong>{{ label }}</strong>
+    </br>
+    </br>
+
+    {% if label == "Spomenik Karadordu" %}
+    U Podgorici je 1968. godine podignut spomenik Đorđu Petroviću, Karađorđu. Rođen je 16. novembra 1752. godine u selu Viševac, u Srbiji. U vrijeme velikih socijalnih i političkih nemira, Karađorđe je postao vođa ustanka protiv Otomanskog Carstva 1804. godine. Bio je vožd ustanka i pokazao se kao hrabar i vešt vojni strateg.
+
+    Uprkos privremenom uspjehu ustanka, sukobi su se nastavili, a Karađorđe je bio primoran da se povuče iz Srbije 1813. godine. Proveo je izgnanstvo u Habsburškoj Monarhiji prije nego što se vratio u Srbiju 1817. godine, ali je njegov politički uticaj opadao.  Izgnan je ponovno 1817. godine, a 1818. godine ubijen je u Beču po nalogu svojih političkih protivnika.
+        {% elif label == "Spomenik zrtvama bombardovanja" %}
+        Spomenik je podignut 1994. godine u Podgorici kao sjećanje na bombardovanje glavnog grada. Najveće bombardovanje dogodilo se, 5. maja 1944. godine kada je poginuo najveći broj ljudi i Podgorica najviše nastradala. Postradalo je njeno stanovništvo, ali i njene ulice, trgovi, mostovi... Godine 1994., prilikom gradnje infrastrukture u gradu pronađena je jedna od mnogih neeksplodiranih bombi. Tom prilikom je i podignut spomenik.
+
+        Riječ je o spomeniku koji podsjeća i opominje na to da je Podgorica stradalnički grad u kojem u jednom trenutku praktično nije ostao ni kamen na kamenu, ali koji su, nakon oslobođenja, narod i omladina podigli iz pepela. Ipak, dešavanja poput ovog  ostaju ugrađena duboko u  identitet svakog grada, tako i stradanja Podgorice, na koju je palo najviše bombi po glavi stanovnika.
+        
+        Podgorica je na primjeru bombardovanja 1944. pokazala svojstvo grada-feniksa. To svojstvo zaslužuje divljenje svih njenih građana i obavezuje nas da ga čuvamo.
+
+        {% endif %}
+
+</br>
+</br>
+</br>
+</br>
+    <button onclick="location.href='/'">Vrati se na pocetak!</button>
+    </div>
+    
+</body>
+</html>
